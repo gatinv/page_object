@@ -7,10 +7,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 import os
 
+os.environ['apiurl']="https://api-250.aurus-sp.app/api"
+os.environ['spurl']="https://250.aurus-sp.app/sign-in"
+
 class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
-        self.url = "https://200.aurus-sp.app/sign-in"
+        self.url = os.environ.get('spurl')
         self.browser.implicitly_wait(timeout)
 
     def open(self): 

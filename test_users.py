@@ -5,7 +5,7 @@ from .swagger import methods
 import os
 import time
 
-link = "https://250.aurus-sp.app/sign-in"
+link = os.environ.get('spurl')
 
 def test_create_user_as_su(browser):
 # log in as super user
