@@ -3,7 +3,7 @@ import json
 
 class methods():
     def get_token():
-        apiurl = "https://api-200.aurus-sp.app/api"
+        apiurl = "https://api-250.aurus-sp.app/api"
         data = {"password" : "password!D1",
         "email" : "superuser@test.tst"
         }
@@ -12,7 +12,7 @@ class methods():
         return token
 
     def get_user_id (email):
-        apiurl = "https://api-200.aurus-sp.app/api"
+        apiurl = "https://api-250.aurus-sp.app/api"
         token = methods.get_token()
         headers = {
             'accept': 'application/json',
@@ -24,7 +24,7 @@ class methods():
         return user_id
 
     def delete_user (user_id):
-        apiurl = "https://api-200.aurus-sp.app/api"
+        apiurl = "https://api-250.aurus-sp.app/api"
         token = methods.get_token()
         headers = {
             'accept': 'application/json',
@@ -36,7 +36,7 @@ class methods():
         print(f'User {deleted_user} successfully deleted')
     
     def create_user (name, email, role, gsdb):
-        apiurl = "https://api-200.aurus-sp.app/api"
+        apiurl = "https://api-250.aurus-sp.app/api"
         token = methods.get_token()
         headers = {
             'accept': 'application/json',
