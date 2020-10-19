@@ -1,7 +1,10 @@
 from .base_page import BasePage
 from .locators import UsersPageLocators
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from datetime import datetime
 import time
 
 class UsersPage(BasePage):
@@ -20,8 +23,18 @@ class UsersPage(BasePage):
         self.browser.find_element(*UsersPageLocators.NAME).send_keys("Edited by %s"%author)
         self.browser.find_element(*UsersPageLocators.SUBMIT).click()
 
-    def check_users_list (self):
-        self.browser.find_element(*UsersPageLocators.ADD)
-
-
-        
+    def check_user_row (self, browser, email):
+        try:
+            browser.find_element(By.XPATH, "//td[text()='%s']"%email)
+            print('Checked successfully.')
+        except:
+            print('Refreshing..')
+            browser.refresh()
+            try:
+                WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//td[text()='%s']"%email)))
+                print('Checked successfully.')
+            except Exception as e:
+                print('Too bad.. The check failed.')
+                print(e)
+                now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+                browser.get_screenshot_as_file('screenshot-%s.png' % now)

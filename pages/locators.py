@@ -43,4 +43,5 @@ class UsersPageLocators():
     ROLES_LIST = (By.XPATH, "//label[text()=' Role ']/following-sibling::div//i")
     GSDB = (By.XPATH, "//label[text()=' GSDB ']/following-sibling::div//input")
     SUBMIT = (By.XPATH, "//button[@type='submit']")
+    USERS_LIST = (By.XPATH, "//table/tbody/tr")
     

@@ -19,6 +19,9 @@ def test_create_user_as_su(browser):
 # check Create user
     page = UsersPage(browser, link)
     page.add_user('test_mail@tst.tst', 'test_name', 'Data viewer', 'SUP01')
+    page.wait_for_alert(browser)
+# check if user row is present
+    page.check_user_row (browser, "test_mail@tst.tst")
 
 def test_modify_user_as_su (browser):
 # log in as super user

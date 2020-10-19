@@ -6,7 +6,7 @@ import requests
 import os
 import time
 
-link = "https://200.aurus-sp.app/sign-in"
+link = "https://250.aurus-sp.app/sign-in"
 current_dir = os.path.abspath(os.path.dirname(__file__))
 file_path = os.path.join(current_dir, 'send_me.txt') 
 
@@ -25,7 +25,7 @@ def test_create_bulletins(browser):
 
 # get token
 def test_run():
-    user_id=methods.get_user_id('123@test.tst')
+    user_id=methods.get_user_id('test_mail@tst.tst')
     methods.delete_user(user_id)
 
 def test_run2():
