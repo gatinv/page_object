@@ -21,10 +21,10 @@ class BasePage():
 
     def wait_for_alert (self, browser):
         try:
-            WebDriverWait(browser, 2).until(EC.presence_of_element_located((By.CLASS_NAME, 'toast-body')))
-            print("alert!")
+            error = WebDriverWait(browser, 2).until(EC.presence_of_element_located((By.CLASS_NAME, 'toast-body'))).text()
+            print(error)
+            now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+            browser.get_screenshot_as_file('screenshot-%s.png' % now)
         except TimeoutException:
-            print("Seems like we are safe...")
-            time.sleep(1)
-            print("..for now")
+            print("Seems like we are safe for now")
 
