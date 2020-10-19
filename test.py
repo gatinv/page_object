@@ -28,5 +28,5 @@ def test_run():
     user_id=methods.get_user_id('test_mail@tst.tst')
     methods.delete_user(user_id)
 
-def test_run2():
+def test_run3():
     methods.create_user('123','123@test.tst','Supplier data viewer', 'SUP02')
