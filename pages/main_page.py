@@ -14,3 +14,10 @@ class MainPage(BasePage):
 
     def go_to_users(self):
         self.browser.find_element(*MainPageLocators.USERS).click()
+    
+    def sign_out(self):
+        self.browser.find_element(*MainPageLocators.PROFILE_DROP).click()
+        self.browser.find_element(*MainPageLocators.SIGN_OUT).click()
+
+    def go_to_ASN(self):
+        self.browser.find_element(*MainPageLocators.ASN).click()

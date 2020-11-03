@@ -23,7 +23,7 @@ class UsersPage(BasePage):
         self.browser.find_element(*UsersPageLocators.NAME).send_keys("Edited by %s"%author)
         self.browser.find_element(*UsersPageLocators.SUBMIT).click()
 
-    def check_user_row (self, browser, email):
+    def check_user_row (self, browser, email, name):
         try:
             browser.find_element(By.XPATH, "//td[text()='%s']"%email)
             print('Checked successfully.')
@@ -32,6 +32,7 @@ class UsersPage(BasePage):
             browser.refresh()
             try:
                 WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//td[text()='%s']"%email)))
+                browser.find_element(By.XPATH, "//td[text()='%s']"%name)
                 print('Checked successfully.')
             except Exception as e:
                 print('Too bad.. The check failed.')
