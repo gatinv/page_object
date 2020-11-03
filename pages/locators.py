@@ -15,6 +15,38 @@ class MainPageLocators():
     ASN = (By.XPATH, "//a[contains(.,'ASN')]")
     PROFILE_DROP = (By.CSS_SELECTOR, ".header__user__login")
     SIGN_OUT = (By.XPATH, "//span[text()=' Sign out ']")
+    VERSIONS = (By.XPATH, "//span[contains(.,'Versions')]")
+    SUPPLIERS = (By.XPATH, "//span[contains(.,'Suppliers')]")
+    ROLES = (By.XPATH, "//span[contains(.,'Roles')]")
+    EMAILS = (By.XPATH, "//span[contains(.,'Emails')]")
+    EMAIL_ARCHIVE = (By.XPATH, "//a[contains(.,'E-mail archive')]")
+    EMAIL_TEMPLATES = (By.XPATH, "//a[contains(.,'Templates')]")
+    LOGS = (By.XPATH, "//span[contains(.,'Logs')]")
+    ORDERS = (By.XPATH, "//span[contains(.,'Orders')]")
+    ORDERS_BY_DAY = (By.XPATH, "//a[contains(.,' Orders grouped by day ')]")
+    NEAREST = (By.XPATH, "//a[contains(.,' Nearest shipment date ')]")
+    NEAREST_BY_SUPP = (By.XPATH, "//a[contains(.,' Nearest shipment by supplier ')]")
+    TWELVE_BY_PART = (By.XPATH, "//a[contains(.,' 12 months reports by part ')]")
+    TWELVE_BY_PARTS = (By.XPATH, "//a[contains(.,' 12 months reports by parts ')]")
+    HISTORY_14 = (By.XPATH, "//a[contains(.,' History for a part by days with a horizon of 14 days and with a running total ')]")
+    HISTORY_17 = (By.XPATH, "//a[contains(.,' History for a part by weeks with a horizon of 17 weeks and with a running total ')]")
+    CORRECTIONS = (By.XPATH, "//a[contains(.,' List of order corrections ')]")
+    AS_ORDERS = (By.XPATH, "//span[contains(.,'AS orders')]")
+    REPORTS = (By.XPATH, "//span[contains(.,'Reports')]")
+    TRANSACTIONS = (By.XPATH, "//a[contains(.,' Transactions ')]")
+    TURNOVER = (By.XPATH, "//a[contains(.,' Turnover ')]")
+    BALANCE = (By.XPATH, "//a[contains(.,' Balance ')]")
+    FORECASTS = (By.XPATH, "//a[contains(.,' Forecasts ')]")
+    PARTS_PROPERTIES = (By.XPATH, "//a[contains(.,' Parts properties ')]")
+    NEW_PARTS = (By.XPATH, "//a[contains(.,' New parts ')]")
+    MISSING_PARTS = (By.XPATH, "//a[contains(.,' Missing parts ')]")
+    LABELS = (By.XPATH, "//span[contains(.,'Labels')]")
+    LABEL_PRINTING = (By.XPATH, "//a[contains(.,' Label printing ')]")
+    LABEL_TEMPLATE = (By.XPATH, "//a[contains(.,' Label template ')]")
+    
+    
+    
+
 
 class BulletinPageLocators():
     ADD = (By.CSS_SELECTOR, "a.btn")
