@@ -1,6 +1,7 @@
 from .pages.login_page import LoginPage
 from .pages.main_page import MainPage
 from .pages.bulletin_page import BulletinPage
+from .pages.suppliers_page import SuppliersPage
 from .pages.asn_page import ASNPage
 from .swagger import methods
 import datetime
@@ -67,7 +68,7 @@ def test_create_asn(browser):
     page.go_to_ASN()    
     page = ASNPage(browser,link)
     page.createASN('SCAC1','RUAEP','CONTAINER1','test','11/03/2020','BOL001','FREIGHT001','995','1000','CONTRACT1','part001','100','1000','шт.','10','GBR','10','','','BIGBOX001','1000')
- 
+    
 def test_create_bulletins(browser):
 # log in as super user
     page = LoginPage(browser, link)
@@ -102,3 +103,15 @@ def test_del_part ():
 
 def test_del_partSupplier ():
     methods.delete_partSupplier('p11')
+
+def test_open_supplier(browser):
+# log in as super user
+    page = LoginPage(browser, link)
+    page.open()
+    page.choose_english_as_default_language()
+    page.login_as("superuser@test.tst", "password!D1")
+# go to suppliers list
+    page = MainPage(browser, link)
+    page.go_to_suppliers()
+    page = SuppliersPage(browser, link)
+    page.open_supplier ('SUP01')

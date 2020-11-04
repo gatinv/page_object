@@ -76,9 +76,20 @@ class UsersPageLocators():
     EMAIL = (By.XPATH, "//label[text()='E-mail']/following-sibling::div//input")
     NAME = (By.XPATH, "//label[text()=' Name ']/following-sibling::div//input")
     ROLES_LIST = (By.XPATH, "//label[text()=' Role ']/following-sibling::div//i")
-    GSDB = (By.XPATH, "//label[text()=' GSDB ']/following-sibling::div//input")
+    GSDB = (By.XPATH, "//label[text()=' ASDB ']/following-sibling::div//input")
     SUBMIT = (By.XPATH, "//button[@type='submit']")
     USERS_LIST = (By.XPATH, "//table/tbody/tr")
+
+class SuppliersPageLocators():
+    FILTER = (By.XPATH, "//span[text()=' Filter ']")
+    SHIPPING_ADDRESS = (By.XPATH, "//span[text()=' Shipping Address ']/following-sibling::div//input")
+    PHYSICAL_ADDRESS = (By.XPATH, "//span[text()=' Physical Address ']/following-sibling::div//input")
+    BILLING_ADDRESS = (By.XPATH, "//span[text()=' Billing Address ']/following-sibling::div//input")
+    TIMEZONE = (By.XPATH, "//span[text()=' Shipping timezone ']/following-sibling::div//input")
+    LANG = (By.XPATH, "//span[text()=' Language ']/following-sibling::div//i")
+    ADD = (By.XPATH, "//span[text()=' Add ']")
+    SAVE = (By.XPATH, "//span[text()=' Save ']")
+    SFTP = (By.XPATH, "//span[text()=' Change SFTP Password ']")
     
 class ASNPageLocators():
     CREATE = (By.XPATH, "//span[text()=' Create ']")
